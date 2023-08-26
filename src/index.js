@@ -45,7 +45,7 @@ function onSelectEl(evt) {
       selectEl.classList.remove('is-hidden');
 
       const { url, breeds } = data[0];
-      infoEl.innerHTML = `<img src='${url}' alt='${breeds[0].name}' width='400px'/><ul class=block><h2>${breeds[0].name}</h2><li class=title>${breeds[0].description}</li><li class=title><span>Temperament:</span> ${breeds[0].temperament}</li></ul>`;
+      infoEl.innerHTML = `<img src='${url}' alt='${breeds[0].name}' width='500px'/><ul class=block><h2>${breeds[0].name}</h2><li class=title>${breeds[0].description}</li><li class=title><span>Temperament:</span> ${breeds[0].temperament}</li></ul>`;
       infoEl.classList.replace('is-hidden', 'cat-info');
     })
     .catch(onError);

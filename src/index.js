@@ -18,6 +18,8 @@ errorEl.classList.replace('error', 'is-hidden');
 addSelect();
 
 function addSelect(data) {
+  loaderEl.classList.replace('is-hidden', 'loader');
+  selectEl.classList.add('is-hidden');
   fetchBreeds(data)
     .then(data => {
       let markSelect = data.map(({ name, id }) => {
@@ -28,6 +30,8 @@ function addSelect(data) {
       new SlimSelect({
         select: selectEl,
       });
+      loaderEl.classList.replace('loader', 'is-hidden');
+      selectEl.classList.remove('is-hidden');
     })
     .catch(onError);
 }

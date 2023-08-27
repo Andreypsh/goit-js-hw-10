@@ -23,6 +23,7 @@ span {
 
 .title {
   margin-bottom: 10px;
+  max-width: 500px;
 }
 .loader {
   display: block;
